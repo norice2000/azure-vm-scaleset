@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "comics" {
-   #name     = "<RESOURCE_GROUP_NAME>"
-   #location = "<RESOURCE_GROUP_LOCATION>"
+   name     = "" #changeme
+   location = "" #changeme
  }
 
  resource "random_string" "fqdn" {
@@ -69,3 +69,4 @@ resource "azurerm_lb_rule" "lbnatrule" {
    backend_address_pool_id        = azurerm_lb_backend_address_pool.bpepool.id
    frontend_ip_configuration_name = "PublicIPAddress"
    probe_id                       = azurerm_lb_probe.comics.id
+}
